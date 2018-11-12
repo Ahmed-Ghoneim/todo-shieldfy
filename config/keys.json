@@ -1,3 +1,3 @@
 {
-  "database": "mongodb://mongo:27017/todo-shieldfly"
+  "database": "mongodb://mongo:27017/todo-shieldfy"
 }

@@ -1,7 +1,7 @@
 FROM node:8
 WORKDIR /app
-COPY package*.json ./app
+COPY package*.json ./
 RUN npm install
-COPY . ./app
-EXPOSE 3000
+COPY . .
+EXPOSE 8080
 CMD npm start

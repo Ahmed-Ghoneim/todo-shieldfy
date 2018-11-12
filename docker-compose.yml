@@ -1,15 +1,18 @@
 version: '3'
 services:
   node:
-    container_name: node-js-container
+    container_name: node-js
     restart: always
     build: .
     ports:
-      - '3000:3000'
+      - "8080:8080"
     links:
       - mongo
+    depends_on:
+      - mongo
   mongo:
-    container_name: mongo-container
-    image: mongo
+    container_name: mongo
+    restart: always
+    image: mongo:3.6
     ports:
-      - '27017:27017'
+      - "27017:27017"
